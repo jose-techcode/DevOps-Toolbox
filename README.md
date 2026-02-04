@@ -114,15 +114,15 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Build the image
 
-`docker build -t toolbox_luanix .`
+`docker build -t devops-toolbox .`
 
 - Scan the Docker image with Trivy (false positives are expected)
 
-`trivy image toolbox_luanix:latest`
+`trivy image devops-toolbox:latest`
 
 - Run the image with privileges
 
-`docker run --rm --privileged toolbox_luanix:latest`
+`docker run --rm --privileged devops-toolbox:latest`
 
 # 6.1. Run in Docker (experimental with Bash)
 
@@ -132,7 +132,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged toolbox_luanix:latest`
+`docker run --rm --privileged devops-toolbox:latest`
 
 # 6.2. Run in Docker (experimental with Makefile)
 
@@ -142,7 +142,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged toolbox_luanix:latest`
+`docker run --rm --privileged devops-toolbox:latest`
 
 # 6.3. Run Prometheus and Grafana in Docker
 
