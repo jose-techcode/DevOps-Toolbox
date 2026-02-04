@@ -1,0 +1,8 @@
+- name: Script orchestration with user permission
+  hosts: local
+  tasks:
+    - name: Organization of files by extensions
+      script: ~/Documentos/DevOps-Toolbox/scripts/debian/files_organization.sh # full directory path
+      
+    - name: Backup of files of main directories
+      script: ~/Documentos/DevOps-Toolbox/scripts/debian/files_backup.sh # full directory path

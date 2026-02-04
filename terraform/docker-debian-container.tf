@@ -15,20 +15,20 @@ provider "docker" {}
 
 # Docker image
 
-resource "docker_image" "toolbox_luanix" {
-  name = "toolbox_luanix:latest"
+resource "docker_image" "devops-toolbox" {
+  name = "devops-toolbox:latest"
 
   build {
-    path = "~/Documentos/TOOLBOX_Luanix"
+    path = "~/Documentos/DevOps-Toolbox/docker-debian"
     dockerfile = "Dockerfile"
   }
 }
 
 # Docker container
 
-resource "docker_container" "toolbox_luanix" {
-  name  = "toolbox_luanix"
-  image = docker_image.toolbox_luanix.name
+resource "docker_container" "devops-toolbox" {
+  name  = "devops-toolbox"
+  image = docker_image.devops-toolbox.name
 
   # Ports
 
