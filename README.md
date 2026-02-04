@@ -84,13 +84,13 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Bash
 
-`git clone https://github.com/jose-techcode/TOOLBOX_Luanix`
+`git clone https://github.com/jose-techcode/DevOps-Toolbox`
 
 # 5. Project Folder
 
 - Bash
 
-`cd TOOLBOX_Luanix`
+`cd DevOps-Toolbox`
 
 # 5.1. Scripts Folder
 
