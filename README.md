@@ -2,36 +2,36 @@
 
 The DevOps Toolbox is a toolbox that uses operations tools for learning and automates file backup, file organization, system cleanup, tool installation, and log auditing. The shell scripting language used was bash. If you want, you can schedule some scripts with cron, using crontab -e in the terminal. The Nano editor is recommended for cron.
 
-# 2. Permissions (cd scripts)
+# 2. Permissions (cd scripts/debian or cd scripts/fedora)
 
-- `chmod +x audit_logs.sh`
+- `chmod +x audit-logs.sh`
 
-- `chmod +x files_backup.sh`
+- `chmod +x files-backup.sh`
 
-- `chmod +x files_organization.sh`
+- `chmod +x files-organization.sh`
 
-- `chmod +x update_clean.sh`
+- `chmod +x update-clean.sh`
 
-- `chmod +x update_install.sh`
+- `chmod +x update-install.sh`
 
-- [PROJECT ROOT] `chmod +x docker_trivy.sh`
+- [PROJECT ROOT] `chmod +x docker-trivy.sh`
 
-# 2.1. Features (cd scripts)
+# 2.1. Features (cd scripts/debian or cd scripts/fedora)
 
-- `sudo ./audit_logs.sh` - Audit of system log and authentication log.
+- `sudo ./audit-logs.sh` - Audit of system log and authentication log.
 
-- `./files_backup.sh` - Backup files from the documents, music, pictures, videos and downloads
+- `./files-backup.sh` - Backup files from the documents, music, pictures, videos and downloads
 directories.
 
-- `./files_organization.sh` - Organizing file extensions into their respective directories.
+- `./files-organization.sh` - Organizing file extensions into their respective directories.
 
-- `sudo ./update_clean.sh` - Update and upgrade packages, remove orphaned dependencies and clean old packages.
+- `sudo ./update-clean.sh` - Update and upgrade packages, remove orphaned dependencies and clean old packages.
 
-- `sudo ./update_install.sh` - Update, upgrade and installs packages.
+- `sudo ./update-install.sh` - Update, upgrade and installs packages.
 
-- [PROJECT ROOT] `./docker_trivy.sh` - Build a Docker image and scan it with Trivy.
+- [PROJECT ROOT] `./docker-trivy.sh` - Build a Docker image and scan it with Trivy.
 
-# 2.2. Makefile features (project root)
+# 2.2. Makefile features (cd makefile/debian or cd makefile/fedora)
 
 - `sudo make logs` - Audit of system log and authentication log.
 
@@ -46,7 +46,7 @@ directories.
 
 - `make image` - Build a Docker image and scan it with Trivy.
 
-# 2.3. Ansible features (cd ansible)
+# 2.3. Ansible features (cd ansible/debian or ansible/fedora)
 
 - `ansible-playbook playbook_sudo.yml --ask-become-pass` - Update, upgrade and install packages, remove orphaned dependencies and clean old packages.
 
@@ -68,10 +68,10 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 # 3. Technologies
 
-- Shell Scripting: Bash
+- Shell Scripting: Bash (5.3+)
 - IaC Language (1): Terraform
 - IaC Language (2): Ansible
-- Environment: Linux/Debian/Fedora
+- Environment: Linux/Debian(13+)/Fedora(42+)
 - Files Format: Makefile & Yaml
 - Code Versioning: Git
 - Containerization: Docker
@@ -110,7 +110,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 `cd terraform`
 
-# 6. Run in Docker (experimental)
+# 6. Run in Docker (cd docker/debian or cd docker/fedora)
 
 - Build the image
 
@@ -124,7 +124,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 `docker run --rm --privileged devops-toolbox:latest`
 
-# 6.1. Run in Docker (experimental with Bash)
+# 6.1. Run in Docker (cd docker/debian or cd docker/fedora)
 
 - Execute this script to build Docker image and scan with Trivy
 
@@ -134,7 +134,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 `docker run --rm --privileged devops-toolbox:latest`
 
-# 6.2. Run in Docker (experimental with Makefile)
+# 6.2. Run in Docker (cd makefile/debian or makefile/fedora)
 
 - Execute this makefile command to build Docker image and scan with Trivy
 
@@ -152,7 +152,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 Acess localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may take a while to fully load on localhost:3000. The username and password of Grafana is admin.
 
-# 7. Terraform features (cd terraform)
+# 7. Terraform features (cd terraform/debian or cd terraform/fedora)
 
 - `terraform init` (optional: -upgrade) - Start the project directory.
 
@@ -184,4 +184,4 @@ This project is licensed under the MIT license.
 
 # 10. Notes
 
-This scripting toolbox is intended exclusively for the Debian operating system. It is not guaranteed to work on other linux distros without adaptation. It is not recommended to use Docker for some scripts, given the dependence on the operating system for the correct functioning of the automations. But, you can use some scripts experimentally in Docker. Much of this project is for learning purposes.
+This scripting toolbox is intended exclusively for the Debian operating system and in future Fedora. It is not guaranteed to work on other linux distros without adaptation. It is not recommended to use Docker for some scripts, given the dependence on the operating system for the correct functioning of the automations. But, you can use some scripts experimentally in Docker. Much of this project is for learning purposes.
