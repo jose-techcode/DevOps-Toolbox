@@ -1,6 +1,6 @@
-# 1. TOOLBOX Luanix
+# 1. DevOps Toolbox
 
-The "TOOLBOX Luanix" is a toolbox that automates backup of files, file organization, system cleanup, tool installation, and log auditing tasks. Packaging these scripts in .deb is not recommended, as they are intended solely for the Debian operating system, and due to their complexity. The shell scripting language used was bash. If you want, you can schedule some scripts with cron, using crontab -e in terminal. Nano editor is recommended for cron.
+The DevOps Toolbox is a toolbox that uses operations tools for learning and automates file backup, file organization, system cleanup, tool installation, and log auditing. The shell scripting language used was bash. If you want, you can schedule some scripts with cron, using crontab -e in the terminal. The Nano editor is recommended for cron.
 
 # 2. Permissions (cd scripts)
 
@@ -14,7 +14,7 @@ The "TOOLBOX Luanix" is a toolbox that automates backup of files, file organizat
 
 - `chmod +x update_install.sh`
 
-- (project root) `chmod +x docker_trivy.sh`
+- [PROJECT ROOT] `chmod +x docker_trivy.sh`
 
 # 2.1. Features (cd scripts)
 
@@ -29,7 +29,7 @@ directories.
 
 - `sudo ./update_install.sh` - Update, upgrade and installs packages.
 
-- (project root) `./docker_trivy.sh` - Build a Docker image and scan it with Trivy.
+- [PROJECT ROOT] `./docker_trivy.sh` - Build a Docker image and scan it with Trivy.
 
 # 2.2. Makefile features (project root)
 
@@ -71,12 +71,13 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 - Shell Scripting: Bash
 - IaC Language (1): Terraform
 - IaC Language (2): Ansible
-- Environment: Linux/Debian
+- Environment: Linux/Debian/Fedora
 - Files Format: Makefile & Yaml
 - Code Versioning: Git
 - Containerization: Docker
-- Scanner (docker image): Trivy
+- Scanner: Trivy
 - CI: Github Actions
+- Logs: Prometheus & Grafana 
 - Optional: Cron
 
 # 4. Clone the Repository
@@ -143,6 +144,12 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 `docker run --rm --privileged toolbox_luanix:latest`
 
+# 6.3. Run Prometheus and Grafana in Docker
+
+- Run the docker-compose.yml
+
+`docker compose up -d`
+
 # 7. Terraform features (cd terraform)
 
 - `terraform init` (optional: -upgrade) - Start the project directory.
@@ -163,7 +170,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - **Note:** 
 
-There are other Terraform commands, but they are not yet applicable to this project. Terraform in this project is more for learning purposes, as the docker_trivy.sh script with makefile solves much of the problem proposed to be solved by Terraform in relation to Docker. Terraform to provision local virtual machine is not recommended depending on your case.
+There are other Terraform commands, but they are not yet applicable to this project. Terraform in this project is more for learning purposes, as the docker_trivy.sh script with makefile solves much of the problem proposed to be solved by Terraform in relation to Docker.
 
 # 8. Contribution
 
@@ -175,4 +182,4 @@ This project is licensed under the MIT license.
 
 # 10. Notes
 
-This scripting toolbox is intended exclusively for the Debian operating system. It is not guaranteed to work on other linux distros without adaptation. It is not recommended to use Docker for some scripts, given the dependence on the operating system for the correct functioning of the automations. But, you can use some scripts experimentally in Docker. Much of this project is for learning purposes. Finished.
+This scripting toolbox is intended exclusively for the Debian operating system. It is not guaranteed to work on other linux distros without adaptation. It is not recommended to use Docker for some scripts, given the dependence on the operating system for the correct functioning of the automations. But, you can use some scripts experimentally in Docker. Much of this project is for learning purposes.
