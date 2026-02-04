@@ -13,8 +13,8 @@ fi
 
 # Building the docker image
 
-docker build -t toolbox_luanix .
+docker build -t devops-toolbox .
 
 # Scan the docker image with trivy tool (false positives are expected)
 
-trivy image toolbox_luanix:latest
+trivy image devops-toolbox:latest
