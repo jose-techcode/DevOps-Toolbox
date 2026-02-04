@@ -150,6 +150,8 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 `docker compose up -d`
 
+Acess localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may take a while to fully load on localhost:3000. The username and password of Grafana is admin.
+
 # 7. Terraform features (cd terraform)
 
 - `terraform init` (optional: -upgrade) - Start the project directory.
