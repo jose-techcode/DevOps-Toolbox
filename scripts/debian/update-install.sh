@@ -117,6 +117,10 @@ echo ""
 echo "-----Test-----"
 echo ""
 
+docker -v
+
+echo ""
+
 docker run hello-world
 
 echo ""
