@@ -13,7 +13,8 @@ fi
 
 # Building the docker image
 
-docker build -t devops-toolbox .
+cd ~/Documentos/DevOps-Toolbox
+docker build -t devops-toolbox -f docker/fedora/Dockerfile .
 
 # Scan the docker image with trivy tool (false positives are expected)
 
