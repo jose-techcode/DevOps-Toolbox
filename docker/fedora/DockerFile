@@ -1,4 +1,4 @@
-# Use an official Debian image
+# Use an official Fedora image
 
 FROM fedora:latest
 
