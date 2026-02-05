@@ -8,29 +8,29 @@ echo:
 # sudo make logs
 
 logs:
-	scripts/debian/audit_logs.sh
+	scripts/debian/audit-logs.sh
 
 # make backup
 
 backup:
-	scripts/debian/files_backup.sh
+	scripts/debian/files-backup.sh
 
 # make organization
 
 organization:
-	scripts/debian/files_organization.sh
+	scripts/debian/files-organization.sh
 
 # sudo make clean
 
 clean:
-	scripts/debian/update_clean.sh
+	scripts/debian/update-clean.sh
 
 # sudo make install
 
 install:
-	scripts/debian/update_install.sh
+	scripts/debian/update-install.sh
 
 # make image
 
 image:
-	docker-debian/docker_trivy.sh
+	docker-debian/docker-trivy.sh
