@@ -14,11 +14,8 @@ Describe the changes made in the pull request.
 - [ ] My code was tested;
 - [ ] I updated the documentation, if necessary.
 
-# 4. Related Issues
-Closes #(Related issue number that was resolved)
-
-# 5. Screenshots (if applicable)
+# 4. Screenshots (if applicable)
 Add images here that help understand the changes.
 
-# 6. Notes
+# 5. Notes
 Leave additional comments, if necessary.
