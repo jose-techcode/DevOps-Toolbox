@@ -46,7 +46,7 @@ directories.
 
 - `make image` - Build a Docker image and scan it with Trivy.
 
-# 2.3. Ansible features (cd ansible/debian or ansible/fedora)
+# 2.3. Ansible features (cd ansible/debian or ansible/fedora) need fix
 
 - `ansible-playbook playbook_sudo.yml --ask-become-pass` - Update, upgrade and install packages, remove orphaned dependencies and clean old packages.
 
@@ -110,11 +110,11 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 `cd terraform`
 
-# 6. Run in Docker (cd docker/debian or cd docker/fedora)
+# 6. Run in Docker (project root)
 
 - Build the image
 
-`docker build -t devops-toolbox .`
+`docker build -t devops-toolbox -f docker/debian/Dockerfile .`
 
 - Scan the Docker image with Trivy (false positives are expected)
 
@@ -122,7 +122,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged devops-toolbox:latest`
+`docker run --rm --privileged devops-toolbox:latest` need fix
 
 # 6.1. Run in Docker (cd docker/debian or cd docker/fedora)
 
@@ -132,7 +132,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged devops-toolbox:latest`
+`docker run --rm --privileged devops-toolbox:latest` need fix
 
 # 6.2. Run in Docker (cd makefile/debian or makefile/fedora)
 
@@ -142,7 +142,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged devops-toolbox:latest`
+`docker run --rm --privileged devops-toolbox:latest` need fix
 
 # 6.3. Run Prometheus and Grafana in Docker
 
@@ -152,7 +152,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 Acess localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may take a while to fully load on localhost:3000. The username and password of Grafana is admin.
 
-# 7. Terraform features (cd terraform/debian or cd terraform/fedora)
+# 7. Terraform features (cd terraform/debian or cd terraform/fedora) need fix
 
 - `terraform init` (optional: -upgrade) - Start the project directory.
 
