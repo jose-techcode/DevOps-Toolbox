@@ -8,29 +8,29 @@ echo:
 # sudo make logs
 
 logs:
-	scripts/fedora/audit-logs.sh
+	../../scripts/fedora/audit-logs.sh
 
 # make backup
 
 backup:
-	scripts/fedora/files-backup.sh
+	../../scripts/fedora/files-backup.sh
 
 # make organization
 
 organization:
-	scripts/fedora/files-organization.sh
+	../../scripts/fedora/files-organization.sh
 
 # sudo make clean
 
 clean:
-	scripts/fedora/update-clean.sh
+	../../scripts/fedora/update-clean.sh
 
 # sudo make install
 
 install:
-	scripts/fedora/update-install.sh
+	../../scripts/fedora/update-install.sh
 
 # make image
 
 image:
-	docker-fedora/docker-trivy.sh
+	../../docker/fedora/docker-trivy.sh
