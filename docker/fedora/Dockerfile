@@ -2,9 +2,9 @@
 
 FROM fedora:latest
 
-# Create the directory for /scripts
+# Create the directory for /scripts/fedora
 
-RUN mkdir -p /scripts
+RUN mkdir -p /scripts/fedora
 
 # Copy update_clean.sh script
 

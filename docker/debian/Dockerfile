@@ -2,9 +2,9 @@
 
 FROM debian:latest
 
-# Create the directory for /scripts
+# Create the directory for /scripts/debian
 
-RUN mkdir -p /scripts
+RUN mkdir -p /scripts/debian
 
 # Copy update_clean.sh script
 
@@ -27,4 +27,4 @@ WORKDIR /workspace
 
 # Define the entrypoint with shell scripting (bash) and run test scripts in docker container
 
-ENTRYPOINT ["/bin/bash", "-c", "/scripts/debian/update_clean.sh && /scripts/debian/files_organization.sh && /scripts/debian/files_backup.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "/scripts/debian/update-clean.sh && /scripts/debian/files-organization.sh && /scripts/debian/files-backup.sh"]
