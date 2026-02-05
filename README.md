@@ -14,7 +14,7 @@ The DevOps Toolbox is a toolbox that uses operations tools for learning and auto
 
 - `chmod +x update-install.sh`
 
-- [PROJECT ROOT] `chmod +x docker-trivy.sh`
+- `chmod +x docker-trivy.sh`
 
 # 2.1. Features (cd scripts/debian or cd scripts/fedora)
 
@@ -29,7 +29,7 @@ directories.
 
 - `sudo ./update-install.sh` - Update, upgrade and installs packages.
 
-- [PROJECT ROOT] `./docker-trivy.sh` - Build a Docker image and scan it with Trivy.
+- `./docker-trivy.sh` - Build a Docker image and scan it with Trivy.
 
 # 2.2. Makefile features (cd makefile/debian or cd makefile/fedora)
 
@@ -114,7 +114,8 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Build the image
 
-`docker build -t devops-toolbox -f docker/debian/Dockerfile .`
+Debian: `docker build -t devops-toolbox -f docker/debian/Dockerfile .`
+Fedora: `docker build -t devops-toolbox -f docker/fedora/Dockerfile .`
 
 - Scan the Docker image with Trivy (false positives are expected)
 
@@ -122,7 +123,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged devops-toolbox:latest` need fix
+`docker run --rm --privileged devops-toolbox:latest`
 
 # 6.1. Run in Docker (cd docker/debian or cd docker/fedora)
 
@@ -132,7 +133,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged devops-toolbox:latest` need fix
+`docker run --rm --privileged devops-toolbox:latest`
 
 # 6.2. Run in Docker (cd makefile/debian or makefile/fedora)
 
@@ -142,7 +143,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Run the image with privileges
 
-`docker run --rm --privileged devops-toolbox:latest` need fix
+`docker run --rm --privileged devops-toolbox:latest`
 
 # 6.3. Run Prometheus and Grafana in Docker
 
