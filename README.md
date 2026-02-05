@@ -115,6 +115,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 - Build the image
 
 Debian: `docker build -t devops-toolbox -f docker/debian/Dockerfile .`
+
 Fedora: `docker build -t devops-toolbox -f docker/fedora/Dockerfile .`
 
 - Scan the Docker image with Trivy (false positives are expected)
