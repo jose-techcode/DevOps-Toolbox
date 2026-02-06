@@ -201,4 +201,4 @@ This project is licensed under the MIT license.
 
 # 10. Notes
 
-The root folder (DevOps-Toolbox) of the project needs to be cloned into a directory called "Documents" if you don't want to refactor everything to work. This scripting toolbox is intended exclusively for Debian and Fedora operating systems. It is not guaranteed to work on other Linux distributions without adaptation. Much of this project is for learning purposes.
+The root folder (DevOps-Toolbox) of the project needs to be cloned into a directory called "Documentos" if you don't want to refactor everything to work. This scripting toolbox is intended exclusively for Debian and Fedora operating systems. It is not guaranteed to work on other Linux distributions without adaptation. Much of this project is for learning purposes.
