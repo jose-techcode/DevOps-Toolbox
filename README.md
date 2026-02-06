@@ -189,7 +189,7 @@ Acess localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may 
 
 - **Note:** 
 
-There are other Terraform commands, but they are not yet applicable to this project. Terraform in this project is more for learning purposes.
+There are other Terraform commands, but they are not yet applicable to this project.
 
 # 8. Contribution
 
