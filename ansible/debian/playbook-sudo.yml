@@ -3,10 +3,10 @@
   become: yes
   tasks:
     - name: Update and upgrade packages, remove orphaned dependencies and clean old packages
-      script: ~/Documentos/DevOps-Toolbox/scripts/debian/update_clean.sh # full directory path
+      script: ~/Documentos/DevOps-Toolbox/scripts/debian/update-clean.sh # full directory path
 
     - name: Update, upgrade and install packages
-      script: ~/Documentos/DevOps-Toolbox/scripts/debian/update_install.sh # full directory path
+      script: ~/Documentos/DevOps-Toolbox/scripts/debian/update-install.sh # full directory path
 
     - name: Update and upgrade packages, remove orphaned dependencies and clean old packages again
-      script: ~/Documentos/DevOps-Toolbox/scripts/debian/update_clean.sh # full directory path
+      script: ~/Documentos/DevOps-Toolbox/scripts/debian/update-clean.sh # full directory path
