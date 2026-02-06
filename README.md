@@ -46,9 +46,9 @@ directories.
 
 - `make image` - Build a Docker image and scan it with Trivy.
 
-# 2.3. Ansible features (cd ansible/debian or ansible/fedora) need fix and future addition of install.sh for fedora
+# 2.3. Ansible features (cd ansible/debian or ansible/fedora)
 
-- `ansible-playbook playbook-sudo.yml --ask-become-pass` - Update, upgrade and install packages, remove orphaned dependencies and clean old packages.
+- `ansible-playbook playbook-sudo.yml --ask-become-pass` - Update, upgrade, remove orphaned dependencies, clean old packages and install packages.
 
 - `ansible-playbook playbook-user.yml` - Organization of files by extensions and backup of files of main directories.
 
