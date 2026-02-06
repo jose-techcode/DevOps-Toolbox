@@ -78,7 +78,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 - Environment: Linux/Debian(13+)/Fedora(42+)
 - Code Versioning: Git (2.53.0+)
 - Containerization: Docker (29.2.1+)
-- Scanner: Trivy (0.69.1)
+- Scanner: Trivy (0.69.1+)
 - Logs: Prometheus (≈ 3.9.1+) & Grafana(≈ 12.3.2+)
 - CI: Github Actions
 - Optional: Cron
