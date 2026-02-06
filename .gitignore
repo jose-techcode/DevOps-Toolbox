@@ -1,6 +1,6 @@
 # Terraform
 
-terraform-provider-docker_v2.15.0
+terraform-provider-docker_v3.6.2
 .terraform.tfstate.lock.info
 terraform.tfstate
 terraform.tfstate.backup
