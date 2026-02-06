@@ -57,6 +57,12 @@ echo ""
 ufw enable
 
 echo ""
+echo "-----Test-----"
+echo ""
+
+ufw --version
+
+echo ""
 
 # -----GIT-----
 
@@ -64,6 +70,12 @@ echo "-----Installing git-----"
 echo ""
 
 apt install -y git
+
+echo ""
+echo "-----Test-----"
+echo ""
+
+git -v
 
 echo ""
 
