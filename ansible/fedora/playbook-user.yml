@@ -2,7 +2,7 @@
   hosts: local
   tasks:
     - name: Organization of files by extensions
-      script: ~/Documentos/DevOps-Toolbox/scripts/fedora/files_organization.sh # full directory path
+      script: ~/Documentos/DevOps-Toolbox/scripts/fedora/files-organization.sh # full directory path
       
     - name: Backup of files of main directories
-      script: ~/Documentos/DevOps-Toolbox/scripts/fedora/files_backup.sh # full directory path
+      script: ~/Documentos/DevOps-Toolbox/scripts/fedora/files-backup.sh # full directory path
