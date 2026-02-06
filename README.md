@@ -154,11 +154,11 @@ Fedora: `docker build -t devops-toolbox -f docker/fedora/Dockerfile .`
 
 Acess localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may take a while to fully load on localhost:3000. The username and password of Grafana is admin.
 
-# 7. Terraform features (cd terraform/debian or cd terraform/fedora) need fix
+# 7. Terraform features (cd terraform/debian or cd terraform/fedora)
 
 - `terraform init` (optional: -upgrade) - Start the project directory.
 
-- `terraform plan` - Show what terraform will create, change, and destroy.
+- `terraform plan` (optional: -out:your_plan.tfplan) - Show what terraform will create, change, and destroy.
 
 - `terraform apply` (optional: -auto-approve) - Applies infrastructure provisioning (container).
 
