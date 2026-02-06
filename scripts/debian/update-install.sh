@@ -40,7 +40,7 @@ echo ""
 echo "-----Installing commomn dependencies-----"
 echo ""
 
-apt install -y software-properties-common apt-transport-https wget ca-certificates curl gnupg lsb-release
+apt install -y wget ca-certificates curl gnupg lsb-release
 
 echo ""
 
@@ -57,12 +57,6 @@ echo ""
 ufw enable
 
 echo ""
-echo "-----Test-----"
-echo ""
-
-ufw --version
-
-echo ""
 
 # -----GIT-----
 
@@ -70,12 +64,6 @@ echo "-----Installing git-----"
 echo ""
 
 apt install -y git
-
-echo ""
-echo "-----Test-----"
-echo ""
-
-git -v
 
 echo ""
 
@@ -94,12 +82,6 @@ echo -e 'Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\
 apt update && apt install codium
 
 echo ""
-echo "-----Test-----"
-echo ""
-
-codium -v
-
-echo ""
 
 # -----DOCKER-----
 
@@ -112,7 +94,6 @@ install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 chmod a+r /etc/apt/keyrings/docker.asc
 
-
 tee /etc/apt/sources.list.d/docker.sources <<EOF
 Types: deb
 URIs: https://download.docker.com/linux/debian
@@ -124,14 +105,6 @@ EOF
 apt update
 
 apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-echo ""
-echo "-----Test-----"
-echo ""
-
-docker -v
-
-echo ""
 
 docker run hello-world
 
@@ -147,12 +120,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashi
 apt update && apt install terraform
 
 echo ""
-echo "-----Test-----"
-echo ""
-
-terraform -v
-
-echo ""
 
 # -----ANSIBLE-----
 
@@ -160,12 +127,6 @@ echo "-----Installing ansible-----"
 echo ""
 
 apt install ansible
-
-echo ""
-echo "-----Test-----"
-echo ""
-
-ansible --version
 
 echo ""
 
@@ -179,11 +140,5 @@ wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dear
 echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" | tee -a /etc/apt/sources.list.d/trivy.list
 apt-get update
 apt-get install trivy
-
-echo ""
-echo "-----Test-----"
-echo ""
-
-trivy -v
 
 echo ""
