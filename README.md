@@ -14,7 +14,7 @@ The DevOps Toolbox is a toolbox that uses operations tools for learning and auto
 
 - `chmod +x update-install.sh`
 
-- `chmod +x docker-trivy.sh`
+- (cd docker/debian or cd docker/fedora) `chmod +x docker-trivy.sh`
 
 # 2.1. Features (cd scripts/debian or cd scripts/fedora)
 
@@ -29,7 +29,7 @@ directories.
 
 - `sudo ./update-install.sh` - Update, upgrade and installs packages.
 
-- `./docker-trivy.sh` - Build a Docker image and scan it with Trivy.
+- (cd docker/debian or cd docker/fedora) `./docker-trivy.sh` - Build a Docker image and scan it with Trivy.
 
 # 2.2. Makefile features (cd makefile/debian or cd makefile/fedora)
 
@@ -73,15 +73,14 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 # 3. Technologies
 
 - Shell Scripting: Bash (5.3+)
-- IaC Language (1): Terraform
-- IaC Language (2): Ansible
+- IaC Language (1): Terraform (1.14.4+)
+- IaC Language (2): Ansible (2.18.12+)
 - Environment: Linux/Debian(13+)/Fedora(42+)
-- Files Format: Makefile & Yaml
-- Code Versioning: Git
-- Containerization: Docker
-- Scanner: Trivy
+- Code Versioning: Git (2.53.0+)
+- Containerization: Docker (29.2.1+)
+- Scanner: Trivy (0.69.1)
+- Logs: Prometheus (≈ 3.9.1+) & Grafana(≈ 12.3.2+)
 - CI: Github Actions
-- Logs: Prometheus & Grafana 
 - Optional: Cron
 
 # 4. Clone the Repository
@@ -94,7 +93,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Bash
 
-`cd DevOps-Toolbox`
+`cd ~/Documentos/DevOps-Toolbox`
 
 # 5.1. Scripts Folder
 
@@ -102,13 +101,25 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 `cd scripts`
 
-# 5.2. Ansible Folder
+# 5.2. Makefile Folder
+
+- Bash
+
+`cd makefile`
+
+# 5.3. Docker Folder
+
+- Bash
+
+`cd docker`
+
+# 5.4. Ansible Folder
 
 - Bash
 
 `cd ansible`
 
-# 5.3. Terraform Folder
+# 5.5. Terraform Folder
 
 - Bash
 
@@ -178,7 +189,7 @@ Acess localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may 
 
 - **Note:** 
 
-There are other Terraform commands, but they are not yet applicable to this project. Terraform in this project is more for learning purposes, as the docker_trivy.sh script with makefile solves much of the problem proposed to be solved by Terraform in relation to Docker.
+There are other Terraform commands, but they are not yet applicable to this project. Terraform in this project is more for learning purposes.
 
 # 8. Contribution
 
@@ -190,4 +201,4 @@ This project is licensed under the MIT license.
 
 # 10. Notes
 
-This scripting toolbox is intended exclusively for the Debian operating system and in future Fedora. It is not guaranteed to work on other linux distros without adaptation. It is not recommended to use Docker for some scripts, given the dependence on the operating system for the correct functioning of the automations. But, you can use some scripts experimentally in Docker. Much of this project is for learning purposes.
+The root folder (DevOps-Toolbox) of the project needs to be cloned into a directory called "Documents" if you don't want to refactor everything to work. This scripting toolbox is intended exclusively for Debian and Fedora operating systems. It is not guaranteed to work on other Linux distributions without adaptation. Much of this project is for learning purposes.
