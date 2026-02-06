@@ -5,6 +5,7 @@ Thank you for caring about the security of this project! To report a security vu
 # 2. How to Report
 
 - Report to the repository's owner's email address.
+
 - Open a issue or pull request in repository.
 
 # 3. What to Avoid
