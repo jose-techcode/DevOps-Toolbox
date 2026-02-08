@@ -32,3 +32,12 @@ echo ""
 dnf autoremove -y
 
 echo ""
+
+# Optional: Remove packages cache
+
+# echo "-----Removing packages cache-----"
+# echo ""
+
+# dnf clean all
+
+# echo ""
