@@ -80,7 +80,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 - Containerization: Docker (29.2.1+)
 - Scanner: Trivy (0.69.1+)
 - Logs: Prometheus (≈ 3.9.1+) & Grafana(≈ 12.3.2+)
-- CI: Github Actions
+- CI: Jenkins (≈ 2.550+) & Github Actions
 - Optional: Cron
 
 # 4. Clone the Repository
@@ -161,13 +161,13 @@ Fedora: `docker build -t devops-toolbox -f docker/fedora/Dockerfile .`
 
 `docker run --rm --privileged devops-toolbox:latest`
 
-# 6.3. Run Prometheus and Grafana in Docker
+# 6.3. Run Jenkins, Prometheus and Grafana in Docker
 
 - Run the docker-compose.yml
 
 `docker compose up -d`
 
-Acess localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may take a while to fully load on localhost:3000. The username and password of Grafana is admin.
+Acess localhost:8080 for Jenkins, localhost:9090 for Prometheus and localhost:3000 for Grafana. Grafana may take a while to fully load on localhost:3000. The user of jenkins is called admin and the password is located at /var/jenkins_home/secrets/initialAdminPassword. The username and password of Grafana is admin. To configure the prometheus datasource in grafana, instead of using the http://localhost:9090 URL, use http://your_docker_gateway:9090. To discover your gateway, type the command `docker network inspect bridge` in the terminal.
 
 # 7. Terraform features (cd terraform/debian or cd terraform/fedora)
 
