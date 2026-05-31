@@ -87,7 +87,7 @@ After adding the scripts, press CTRL + O + Enter to save and CTRL + X to exit. T
 
 - Bash
 
-`git clone https://github.com/jose-techcode/DevOps-Toolbox`
+`git clone https://github.com/josewalter01/DevOps-Toolbox`
 
 # 5. Project Folder
 
