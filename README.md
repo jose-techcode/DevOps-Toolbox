@@ -1,6 +1,6 @@
 # 1. DevOps Toolbox
 
-The DevOps Toolbox is a toolbox that uses operations tools for learning and automates file backup, file organization, system cleanup, tool installation, and log auditing. The shell scripting language used was bash. If you want, you can schedule some scripts with cron, using crontab -e in the terminal. The Nano editor is recommended for cron.
+[DEPRECATED] The DevOps Toolbox is a toolbox that uses operations tools for learning and automates file backup, file organization, system cleanup, tool installation, and log auditing. The shell scripting language used was bash. If you want, you can schedule some scripts with cron, using crontab -e in the terminal. The Nano editor is recommended for cron.
 
 # 2. Permissions (cd scripts/debian or cd scripts/fedora)
 
